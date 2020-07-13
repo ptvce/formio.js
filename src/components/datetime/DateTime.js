@@ -86,7 +86,7 @@ export default class DateTimeComponent extends Input {
 
     /* eslint-disable camelcase */
     this.component.widget = {
-      type: 'calendar',
+      type: 'persiancalendar',
       timezone,
       displayInTimezone: _.get(this.component, 'displayInTimezone', 'viewer'),
       submissionTimezone: this.submissionTimezone,
@@ -123,7 +123,7 @@ export default class DateTimeComponent extends Input {
   }
 
   get widget() {
-    const widget = this.component.widget ? new Widgets[this.component.widget.type](this.component.widget, this.component): null;
+    const widget = this.component.widget ? new Widgets[this.component.widget.type](this.component.widget, this.component) : null;
     return widget;
   }
 
